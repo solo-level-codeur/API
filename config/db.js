@@ -8,6 +8,7 @@ const pool = mysql.createPool({
     password: process.env.MYSQLPASSWORD,  // Le mot de passe de l'utilisateur MySQL
     database: process.env.MYSQLDATABASE,  // Nom de la base de données
     port: process.env.MYSQLPORT || 3306,  // Le port de la base de données (3306 est le port par défaut pour MySQL)
+    url: process.env.MYSQL_URL
 }).promise();  // Active l'utilisation des promesses avec async/await
 
 module.exports = pool;
